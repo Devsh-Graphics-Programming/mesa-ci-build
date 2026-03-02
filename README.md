@@ -3,8 +3,8 @@
 ## Build
 
 ```powershell
-git clone <REPO_URL>
-cd <CLONE DIR>
+git clone https://github.com/Devsh-Graphics-Programming/mesa-ci-build.git
+cd mesa-ci-build
 
 pwsh -NoProfile -ExecutionPolicy RemoteSigned -File .\build-simple.ps1 -Config release
 pwsh -NoProfile -ExecutionPolicy RemoteSigned -File .\build-simple.ps1 -Config debug
