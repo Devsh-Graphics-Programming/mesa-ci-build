@@ -8,9 +8,6 @@ cd mesa-ci-build
 
 pwsh -NoProfile -ExecutionPolicy RemoteSigned -File .\build-simple.ps1 -Config release
 pwsh -NoProfile -ExecutionPolicy RemoteSigned -File .\build-simple.ps1 -Config debug
-
-Write-Host "Artifacts in _artifacts\\release and _artifacts\\debug"
-Write-Host "Logs in _artifacts\\logs"
 ```
 
 Artifacts land in:
