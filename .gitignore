@@ -1,0 +1,6 @@
+# Local-only artifacts
+_artifacts/
+_container/
+_mesa_ci/
+_run/
+container/install_*.ps1
