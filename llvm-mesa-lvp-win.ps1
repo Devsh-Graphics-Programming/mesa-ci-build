@@ -519,6 +519,14 @@ function Ensure-MesaSource {
         Invoke-Checked -Exe "git" -Args @("-C", $MesaSrcDir, "remote", "set-url", "origin", $MesaRepo) -Step "mesa set remote"
     }
 
+    $mesaGitDir = Join-Path $MesaSrcDir ".git"
+    if (Test-Path $mesaGitDir) {
+        $lock = Join-Path $mesaGitDir "index.lock"
+        if (Test-Path $lock) { Remove-Item -Force $lock }
+        & git -C $MesaSrcDir reset --hard | Out-Null
+        & git -C $MesaSrcDir clean -fdx | Out-Null
+    }
+
     Invoke-Checked -Exe "git" -Args @("-C", $MesaSrcDir, "fetch", "origin", "--tags") -Step "mesa fetch"
 
     if (-not [string]::IsNullOrWhiteSpace($MesaRef)) {
