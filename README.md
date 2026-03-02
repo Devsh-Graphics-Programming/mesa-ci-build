@@ -4,7 +4,7 @@
 
 ```powershell
 git clone <REPO_URL>
-cd llvmpipebuildwindows
+cd <CLONE DIR>
 
 pwsh -NoProfile -ExecutionPolicy RemoteSigned -File .\build-simple.ps1 -Config release
 pwsh -NoProfile -ExecutionPolicy RemoteSigned -File .\build-simple.ps1 -Config debug
