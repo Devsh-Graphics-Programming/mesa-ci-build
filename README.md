@@ -58,6 +58,6 @@ The failure we could reproduce consistently was a llvmpipe crash in MCJIT or llc
 Mesa IR looked valid.
 
 Official Mesa CI on a newer 26.0.1 branch still uses LLVM 19.1.7.
-We pulled the official Mesa artifact and it worked.
+We pulled the official Mesa artifact and the crash still happens.
 Then we rebuilt it 1:1 with the same CI options.
-We also added a debug variant with debug LLVM and debug Mesa for symbols.
+We also added a debug variant with debug LLVM and debug Mesa for symbols to investigate.
